@@ -9,4 +9,11 @@ class UI{
         const booksTabel = document.querySelector('#books')
         booksTabel.appendChild(bookRow)
     }
+
+    getInputData(selector){
+        return document.querySelector(selector)
+    }
+    clearInputData(selector){
+        document.querySelector(selector).value = ''
+    }
 }
