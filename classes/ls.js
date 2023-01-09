@@ -11,8 +11,8 @@ class LS {
 
     deleteBook(book){
         let books = this.getData('books_oop')
-        books.forEach(function(bookFromLS, index) {
-            if (bookFromLS.title[0] === book.title[0] && bookFromLS.author[1] === book.author[1] && bookFromLS.isbn[2] === book.isbn[2]) {
+        books.forEach(function(bookFromLS, index){
+            if( bookFromLS.title === book.title && bookFromLS.author === book.author && bookFromLS.isbn === book.isbn){
                 books.splice(index, 1)
             }
         })
