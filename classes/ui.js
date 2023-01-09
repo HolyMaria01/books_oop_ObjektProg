@@ -14,7 +14,7 @@ class UI{
         const X = this.parentElement(eventTarget)
         const bookRow = this.parentElement(X)
         bookRow.remove()
-        this.parentElement(X).remove()
+
         const isbn = this.previousElement(X)
         const author = this.previousElement(isbn)
         const title = this.previousElement(author)
@@ -23,10 +23,9 @@ class UI{
         return book
     }
 
-    parentElement(){
-        return element.parentElement()
+    parentElement(element){
+        return element.parentElement
     }
-
     previousElement(element){
         return element.previousElementSibling
     }
